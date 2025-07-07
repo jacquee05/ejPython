@@ -1,7 +1,7 @@
 import urllib.request, gzip, io
 
 def mostrar_pib_pais():
-    url = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/sdg_08_10?format=TSV&compressed=true"
+    url = "url:https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true"
     respuesta = urllib.request.urlopen(url)
     datos = gzip.GzipFile(fileobj=io.BytesIO(respuesta.read())).read().decode('utf-8').splitlines()
 
