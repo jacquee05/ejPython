@@ -12,4 +12,4 @@ def mostrar_linea_tabla():
             print(lineas[m - 1].strip())
     except FileNotFoundError:
         print(f"El archivo tabla-{n}.txt no existe.")
-
+ mostrar_linea_tabla()
